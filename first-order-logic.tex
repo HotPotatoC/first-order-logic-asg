@@ -155,13 +155,13 @@ $$
         grow'=up,
         anchor=west,
         level distance=7em,
-        level 1/.style={sibling distance=27em},
+        level 1/.style={sibling distance=20em},
         level 2/.style={sibling distance=30em},
         level 3/.style={sibling distance=15em}
     ]
     \node (f) {$\neg S(Peter)$}
     child {
-            node(1l) {$\neg S(Peter) \lor \neg DF(Mathematic) \lor A(Peter, Mathematic)$}
+            node(1l) {$\neg S(Peter) \lor A(Peter, Mathematic)$}
             child {
                     node (2ll) {$\neg S(Peter) \lor \neg DF(Mathematic) \lor A(Peter, Mathematic)$}
                     child {node(3lll) {$L(Peter, Mathematic)$}}
@@ -172,42 +172,6 @@ $$
     child { node(1l) {$\neg A(Peter, Mathematic)$} };
 \end{tikzpicture}
 Therefore, since the resolution tree does not end with a null result. It is proven that the statement "Pether hate mathematic" is \bd{FALSE}.
-% \begin{tikzpicture}[
-%         grow'=up,
-%         level 1/.style={sibling distance=14em},
-%         level 2/.style={sibling distance=6em}]
-%     \node (f) {False}
-%     child { node (1l) {$p(a)$}
-%             child {node (2ll) {$\neg p(a)$}}
-%             child {node (2lr) {$p(a)\vee p(b)$}}
-%         }
-%     child {node (1r) {$\neg p(a)$}
-%             child {node (2rl) {$p(X)\vee r(X)$}}
-%             child {node (2rr) {$\neg r(b)$}}
-%         };
-% \end{tikzpicture}
-% \begin{forest}
-%     for tree={
-%     grow'=90,
-%     parent anchor=north,
-%     before typesetting nodes={
-%             if level=0{}{
-%                     if content={}{
-%                             shape=coordinate
-%                         }{
-%                             content/.wrap value={\{#1\}},
-%                         },
-%                 },
-%         }
-%     }
-%     [\Box
-%     [$m$
-%         [$a$
-%                 [$\lnot L(Peter, Mathematic)$]
-%                     [$\lnot S(x) \lor \lnot D(x,Engineering) \lor L(x,Mathematic) \lor \lnot L(x,Mathematic)$]
-%             ]
-%     ]
-%     ]
-% \end{forest}
+
 % === End of page 4 === %
 \end{document}
